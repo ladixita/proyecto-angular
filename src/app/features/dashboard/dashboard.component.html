@@ -1,0 +1,37 @@
+<mat-drawer-container class="example-container" autosize>
+  <!--sidebar inicio-->
+  <mat-drawer [opened]="true" #drawer class="example-sidenav" mode="side">
+      <mat-nav-list>
+          <a mat-list-item href="..." >Inicio</a>
+          <a mat-list-item href="..." >Alumno</a>
+          <a mat-list-item href="..." >Curso</a>
+          <a mat-list-item href="..." >Clase</a>
+      </mat-nav-list>
+  </mat-drawer>
+  <!--sidebar fin-->
+
+  <!--main content inicio-->
+  <div class="example-sidenav-content">
+      <!--Toolbar inicio-->
+      <mat-toolbar color="primary">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+              (click)="drawer.toggle()">
+              <mat-icon>menu</mat-icon>
+          </button>
+          <span>My App</span>
+          <span class="example-spacer"></span>
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+          </button>
+      </mat-toolbar>
+      <!--Toolbar fin-->
+
+      <main class="p-5">
+          <app-alumnos></app-alumnos>
+      </main>
+  </div>
+  <!--main content fin-->
+</mat-drawer-container>
